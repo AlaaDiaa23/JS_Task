@@ -107,10 +107,10 @@ const validateInputs = function (productName, price, quantity) {
   if (productName == "" || productName == null) {
     return false;
   }
-  if (price == null || price <= 0) {
+  if (price == null || price <= 0 || isNaN(Number(price))) {
     return false;
   }
-  if (quantity == "" || isNaN(quantity) || quantity < 0) {
+  if (quantity == "" || isNaN(Number(quantity)) || quantity < 0) {
     return false;
   } else {
     return true;
